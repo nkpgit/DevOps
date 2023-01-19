@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+  labels:
+    env: web
+spec:
+  replicas: 5
+  #strategy.type: Recreate
+  selector:
+    matchLabels:
+      env: web
+  template:
+    metadata:
+      name: mynginx
+      labels:
+        env: web
+    spec:
+      containers:
+      - name: mynginx
+        image: docker4nirmal/mynginx:mynginx

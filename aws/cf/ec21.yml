@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Ec2 Instance test'
+Resources:
+  MyEc2InstanceTest:
+    EC2Instance:
+      Type: AWS::EC2::Instance
+      Properties: 
+        ImageId: "ami-094125af156557ca2"
+        InstanceType: "t2.micro"
+        KeyName: "myec2"      

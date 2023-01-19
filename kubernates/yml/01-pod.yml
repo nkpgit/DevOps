@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mynginx
+  labels:
+    app: webserver
+    servicename: account-service
+    env: dev
+    support: java
+spec:
+  containers:
+  - name: mynginx
+    image: nginx

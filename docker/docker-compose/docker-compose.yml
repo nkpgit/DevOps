@@ -1,0 +1,8 @@
+version: "3"
+services:
+  sonarqube:
+    image: sonarsource/sonar-scanner-cli
+    hostname: sonarqube
+    container_name: sonarqube
+    ports:
+      - "80:9000"
